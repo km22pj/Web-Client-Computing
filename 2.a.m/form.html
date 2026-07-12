@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오늘도 잠은 망했습니다</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <!-- 배경 장식 -->
+  <div class="moon" aria-hidden="true"></div>
+  <div class="shooting-stars" aria-hidden="true"></div>
+
+  <!-- 상단 메뉴 -->
+  <header>
+    <h3>오늘도 잠은 망했습니다</h3>
+    <nav id="mainNav">
+      <a href="main.html">메인</a>
+      <a href="form.html" class="active">진단하기</a>
+      <a href="game.html">게임하기</a>
+      <a href="team.html">팀 소개</a>
+      <a href="credit.html">크레딧</a>
+    </nav>
+    <span class="header-logo">2AM</span>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <!-- 소개 -->
+    <section class="intro">
+      <h1>새벽 감성 지수 진단</h1>
+      <p>당신의 새벽이 얼마나 위험한지 분석해 드립니다.</p>
+    </section>
+
+    <!-- 질문 영역 -->
+    <section class="test-box">
+      <div class="question">
+        <p>Q1. 지금 나는 감성이 폭발할 것 같다.</p>
+        <div class="scale">
+          <span class="label left">매우 그렇지 않다</span>
+          <div class="options">
+            <button class="circle big blue" type="button" data-score="1" aria-label="1점"></button>
+            <button class="circle medium blue" type="button" data-score="2" aria-label="2점"></button>
+            <button class="circle small gray" type="button" data-score="3" aria-label="3점"></button>
+            <button class="circle medium purple" type="button" data-score="4" aria-label="4점"></button>
+            <button class="circle big purple" type="button" data-score="5" aria-label="5점"></button>
+          </div>
+          <span class="label right">매우 그렇다</span>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>Q2. 지금 나는 전 남/여친이 생각난다.</p>
+        <div class="scale">
+          <span class="label left">매우 그렇지 않다</span>
+          <div class="options">
+            <button class="circle big blue" type="button" data-score="1" aria-label="1점"></button>
+            <button class="circle medium blue" type="button" data-score="2" aria-label="2점"></button>
+            <button class="circle small gray" type="button" data-score="3" aria-label="3점"></button>
+            <button class="circle medium purple" type="button" data-score="4" aria-label="4점"></button>
+            <button class="circle big purple" type="button" data-score="5" aria-label="5점"></button>
+          </div>
+          <span class="label right">매우 그렇다</span>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>Q3. 지금 나는 신나는 노래보다 차분한 노래가 듣고 싶다.</p>
+        <div class="scale">
+          <span class="label left">매우 그렇지 않다</span>
+          <div class="options">
+            <button class="circle big blue" type="button" data-score="1" aria-label="1점"></button>
+            <button class="circle medium blue" type="button" data-score="2" aria-label="2점"></button>
+            <button class="circle small gray" type="button" data-score="3" aria-label="3점"></button>
+            <button class="circle medium purple" type="button" data-score="4" aria-label="4점"></button>
+            <button class="circle big purple" type="button" data-score="5" aria-label="5점"></button>
+          </div>
+          <span class="label right">매우 그렇다</span>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>Q4. 나는 지금 술 한잔 하고 싶다.</p>
+        <div class="scale">
+          <span class="label left">매우 그렇지 않다</span>
+          <div class="options">
+            <button class="circle big blue" type="button" data-score="1" aria-label="1점"></button>
+            <button class="circle medium blue" type="button" data-score="2" aria-label="2점"></button>
+            <button class="circle small gray" type="button" data-score="3" aria-label="3점"></button>
+            <button class="circle medium purple" type="button" data-score="4" aria-label="4점"></button>
+            <button class="circle big purple" type="button" data-score="5" aria-label="5점"></button>
+          </div>
+          <span class="label right">매우 그렇다</span>
+        </div>
+      </div>
+
+      <div class="question select-question">
+        <label for="drinkingStyle">Q5. 내 주사는?</label>
+        <select id="drinkingStyle" name="drinkingStyle">
+          <option value="" selected disabled>주사를 선택해주세요</option>
+          <option value="sleepyhead">잠만보형😴</option>
+          <option value="emotional-speeding">감정과속형🚄</option>
+          <option value="talker">수다쟁이형🗣️</option>
+          <option value="confession">고백충동형💌</option>
+          <option value="singer">가수데뷔형🎤</option>
+          <option value="caller">연락충🫨</option>
+        </select>
+      </div>
+    </section>
+
+    <button id="analyzeBtn" type="button">분석하기</button>
+
+    <!-- 결과 영역 -->
+    <section class="result">
+      <h2>분석 결과</h2>
+      <div class="cards">
+        <div class="card">
+          <p>새벽 감성도</p>
+          <h3>0%</h3>
+          <div class="bar"><div></div></div>
+          <small>아직 분석 전입니다.</small>
+        </div>
+
+        <div class="card">
+          <p>수면 실패 확률</p>
+          <h3>0%</h3>
+          <div class="bar"><div></div></div>
+          <small>오늘 잠 상태를 분석합니다.</small>
+        </div>
+
+        <div class="card">
+          <p>후회 지수</p>
+          <h3>-</h3>
+          <div class="bar"><div></div></div>
+          <small>내일 아침의 나를 조심하세요.</small>
+        </div>
+
+        <div class="card">
+          <p>SNS 위험도</p>
+          <h3>Lv. -</h3>
+          <div class="bar"><div></div></div>
+          <small>감성 글 업로드 여부를 판단합니다.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <b>2AM</b>
+    <p>© 2026 Team 2AM. 오늘도 잠은 망했습니다.</p>
+    <span>Privacy Policy &nbsp; Terms of Service</span>
+  </footer>
+
+  <div class="result-modal" id="resultModal" aria-hidden="true">
+    <div class="result-modal-card" role="dialog" aria-modal="true" aria-labelledby="levelMessage">
+      <span class="result-modal-star" aria-hidden="true">✦</span>
+      <p>감성 위험도</p>
+      <h2 id="levelMessage"></h2>
+      <strong class="level-nickname" id="levelNickname"></strong>
+      <button class="result-modal-close" id="resultModalClose" type="button">결과 확인하기</button>
+    </div>
+  </div>
+
+  <div class="music-player" id="musicPlayer">
+    <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">음악 켜기</button>
+    <div class="music-frame" id="musicFrame" aria-hidden="true"></div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/music.js"></script>
+</body>
+</html>
